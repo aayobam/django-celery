@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block head_title %} Contact us {% endblock head_title %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center m-5">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                <form action="" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <div class="">
+                        <label for="{{ form.email.label }}">{{ form.email.label }}</label>
+                        {{ form.email }}
+                        {{ form.email.errors }}
+                    </div>
+
+                    <div class="">
+                        <label for="{{ form.full_name.label }}">{{ form.full_name.label }}</label>
+                        {{ form.full_name }}
+                        {{ form.name.errors }}
+                    </div>
+
+                    <div class="">
+                        <label for="{{ form.subject.label }}">{{ form.subject.label }}</label>
+                        {{ form.subject }}
+                        {{ form.subject.errors }}
+                    </div>
+
+                    <div class="">
+                        <label for="{{ form.message.label }}">{{ form.message.label }}</label>
+                        {{ form.message }}
+                        {{ form.message.errors }}
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 mt-2">Send Mail</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

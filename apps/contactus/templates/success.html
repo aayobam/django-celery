@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block head_title %} Success {% endblock head_title %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center m-5">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                <p class="text-success">Message has been sent and delivered successful</p>
+                <a href="{% url 'contact-us' %}" class="btn btn-primary w-100">Send a new mail.</a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
